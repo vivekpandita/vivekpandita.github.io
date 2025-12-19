@@ -65,7 +65,24 @@
         }
 
         .nav-content { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.5rem; font-weight: 700; color: #fff; }
+        /* Update the .logo class */
+.logo {
+    display: flex;             /* Aligns image and text side-by-side */
+    align-items: center;       /* Centers them vertically */
+    gap: 10px;                 /* Space between image and text */
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Add this new rule for the image */
+.logo img {
+    height: 40px;              /* Adjust this to fit your navbar height */
+    width: auto;               /* Keeps the aspect ratio */
+    border-radius: 50%;        /* Optional: Makes the logo circular */
+    object-fit: cover;
+}
         .nav-links a {
             color: var(--text-muted);
             margin-left: 2rem;
@@ -348,7 +365,10 @@
 
     <nav>
         <div class="container nav-content">
-            <a href="#" class="logo">Vivek<span style="color:var(--primary)">.Pandita</span></a>
+            <a href="#" class="logo">
+            <img src="logo.png" alt="Logo">
+            <span>Vivek<span style="color:var(--primary)">.Pandita</span></span>
+			</a>
             <div class="nav-links">
                 <a href="#projects">Work</a>
                 <a href="#skills">Skills</a>
